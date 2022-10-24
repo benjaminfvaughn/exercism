@@ -42,5 +42,4 @@ def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
     baking and calculates the total elapsed minutes spent cooking the lasagna.
     """
     prep_time = preparation_time_in_minutes(number_of_layers)
-    bake_time = bake_time_remaining(elapsed_bake_time)
-    return prep_time + bake_time
+    return prep_time + elapsed_bake_time
