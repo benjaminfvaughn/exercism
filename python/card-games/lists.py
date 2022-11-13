@@ -13,8 +13,8 @@ def get_rounds(number):
 
     rounds = []
 
-    for x in range(3):
-        rounds.append(number + x)
+    for round_ind in range(3):
+        rounds.append(number + round_ind)
 
     return rounds
 
@@ -47,8 +47,8 @@ def card_average(hand):
 
     sum_of_hand = 0
 
-    for x in hand:
-        sum_of_hand = sum_of_hand + x
+    for card in hand:
+        sum_of_hand = sum_of_hand + card
 
     return sum_of_hand / len(hand)
 
@@ -74,8 +74,8 @@ def average_even_is_average_odd(hand):
     even_sum = 0
     even_cnt = 0
 
-    for x in range(0, len(hand), 2):
-        even_sum = even_sum + hand[x]
+    for card in range(0, len(hand), 2):
+        even_sum = even_sum + hand[card]
         even_cnt +=1
 
     even_avg = even_sum / even_cnt
@@ -83,8 +83,8 @@ def average_even_is_average_odd(hand):
     odd_sum = 0
     odd_cnt = 0
 
-    for x in range(1, len(hand), 2):
-        odd_sum = odd_sum + hand[x]
+    for card in range(1, len(hand), 2):
+        odd_sum = odd_sum + hand[card]
         odd_cnt +=1
 
     odd_avg = odd_sum / odd_cnt
