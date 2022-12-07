@@ -81,8 +81,14 @@ def student_ranking(student_scores, student_names):
     :return: list - of strings in format ["<rank>. <student name>: <score>"].
     """
 
-    pass
+    ranked_students = []
+    i = 0
 
+    while i < len(student_scores):
+        ranked_students.append(f"{i+1}. {student_names[i]}: {student_scores[i]}")
+        i += 1
+
+    return ranked_students
 
 def perfect_score(student_info):
     """Create a list that contains the name and grade of the first student to make a perfect score on the exam.
