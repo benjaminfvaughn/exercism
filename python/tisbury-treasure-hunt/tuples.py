@@ -27,7 +27,7 @@ def compare_records(azara_record, rui_record):
     :return: bool - do the coordinates match?
     """
 
-    return (convert_coordinate(azara_record[1]) == rui_record[1])
+    return convert_coordinate(azara_record[1]) == rui_record[1]
 
 def create_record(azara_record, rui_record):
     """Combine the two record types (if possible) and create a combined record group.
@@ -37,10 +37,10 @@ def create_record(azara_record, rui_record):
     :return: tuple or str - the combined record (if compatible), or the string "not a match" (if incompatible).
     """
 
-    if (compare_records(azara_record, rui_record)):
+    if compare_records(azara_record, rui_record):
         return tuple((azara_record[0],azara_record[1],rui_record[0],rui_record[1],rui_record[2]))
-    else:
-        return "not a match"
+
+    return 'not a match'
 
 def clean_up(combined_record_group):
     """Clean up a combined record group into a multi-line string of single records.
