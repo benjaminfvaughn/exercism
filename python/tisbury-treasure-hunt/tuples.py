@@ -53,4 +53,9 @@ def clean_up(combined_record_group):
     (see HINTS.md for an example).
     """
 
-    pass
+    cleaned = ''
+
+    for location in combined_record_group:
+        cleaned = cleaned + f"('{location[0]}', '{location[2]}', {location[3]}, '{location[4]}')\n"
+
+    return cleaned
